@@ -1,0 +1,16 @@
+PODS:
+  - AdisonOfferwallSDK (1.2.22)
+
+DEPENDENCIES:
+  - AdisonOfferwallSDK (= 1.2.22)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AdisonOfferwallSDK
+
+SPEC CHECKSUMS:
+  AdisonOfferwallSDK: 62dde33fc5c7ca7c04967e5100b91d646b508404
+
+PODFILE CHECKSUM: 35b39390e5ebb2f3e54579e90e1f9e814cb65d1f
+
+COCOAPODS: 1.7.2
