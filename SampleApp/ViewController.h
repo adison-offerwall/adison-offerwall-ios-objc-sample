@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <AdisonOfferwallSDK/AdisonOfferwallSDK.h>
 
 @interface ViewController : UIViewController
 
+- (IBAction)buttonPressed:(id)sender;
 
 @end
 

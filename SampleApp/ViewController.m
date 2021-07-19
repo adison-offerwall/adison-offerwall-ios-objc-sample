@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 
+#import <AdisonOfferwallSDK/AdisonOfferwallSDK.h>
+#import <PayboocOfwModule/PayboocOfwModule-Swift.h>
 
 @interface ViewController ()
 
@@ -19,10 +21,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [[Adison shared] initializeWith:@"jqXq9NuKFVGoMEcQsdBwZrYA"];
-    
-    [[Adison shared] setServer:StageProduction];
+    [[Adison shared] setServer:StageDevelopment];
     [[Adison shared] isTester:YES];
+    
+    [PayboocOfw loadModule];
+    
+    [[Adison shared] availableReward:^(NSString *name, NSString * unit, long points) {
+        NSLog(@"point= %ld", points);
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -32,9 +38,12 @@
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
-    [[Adison shared] presentOfferwall:self adId:nil animated:NO completion:nil];
 }
+
+- (IBAction)buttonPressed:(id)sender {
+    [[Adison shared] presentOfferwall:self completion:nil];
+}
+
 
 
 @end

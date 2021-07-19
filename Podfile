@@ -6,6 +6,5 @@ target 'SampleApp' do
 #  use_frameworks!
 
   # Pods for SampleApp
-#  pod 'AdisonOfferwallSDK', '1.2.12'
-  pod 'AdisonOfferwallSDK', '1.2.22'
+  pod 'PayboocOfwModule', '0.9.8'
 end
